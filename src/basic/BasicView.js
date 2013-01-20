@@ -1,4 +1,3 @@
-
 setDefaults({
 	weekMode: 'fixed'
 });
@@ -212,6 +211,12 @@ function BasicView(element, calendar, viewName) {
 				cell.removeClass(tm + '-state-highlight fc-today');
 			}
 			cell.find('div.fc-day-number').text(date.getDate());
+			//Past date
+			if (+date <= +today) {
+				cell.addClass('past');
+			}else{
+				cell.removeClass('past');
+			}
 			if (dowDirty) {
 				setDayID(cell, date);
 			}
