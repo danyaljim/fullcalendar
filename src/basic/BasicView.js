@@ -217,6 +217,12 @@ function BasicView(element, calendar, viewName) {
 			}else{
 				cell.removeClass('past');
 			}
+			//Date selector mod. fc-date_yyyyMMdd
+			cell.addClass('fc-date');
+			cell.find('div.fc-day-number').text(date.getDate());
+			cell.alterClass( 'fc-date*', ' ' )
+			cell.addClass('fc-date_'+$.fullCalendar.formatDate(date, 'yyyyMMdd'));
+			cell.attr('data-date', $.fullCalendar.formatDate(date, 'yyyyMMdd'));
 			if (dowDirty) {
 				setDayID(cell, date);
 			}
