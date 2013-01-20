@@ -1,4 +1,3 @@
-
 /* Month View, Basic Week View, Basic Day View
 ------------------------------------------------------------------------*/
 
@@ -39,5 +38,8 @@
 .fc-rtl .fc-grid .fc-event-time {
 	float: right;
 	}
-	
+
+.past{
+	color: #A9A9A9;
+}
 	
